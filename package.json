@@ -1,0 +1,9 @@
+{
+<<<<<<< HEAD
+  "name": "hello_app",
+=======
+  "name": "bilety",
+>>>>>>> bilety
+  "private": true,
+  "dependencies": {}
+}

@@ -1,0 +1,40 @@
+<div class="card col-md-6 col-lg-6 col-sm-12" style="display: inline-block; float:none">
+  <p id="komunikat"><%= flash[:komunikat] %></p>
+
+  <p class="lbl">
+    <strong>Artist:</strong>
+    <%= @event.artist %>
+  </p>
+
+  <p class="lbl">
+    <strong>Description:</strong>
+    <%= @event.description %>
+  </p>
+
+  <p class="lbl">
+    <strong>Date:</strong>
+    <%= @event.event_date %>
+  </p>
+
+  <p class="lbl">
+    <strong>Price (min):</strong>
+    <%= @event.price_low %>
+  </p>
+
+  <p class="lbl">
+    <strong>Price (max):</strong>
+    <%= @event.price_high %>
+  </p>
+
+</div>
+
+<div class="card col-lg-6 col-md-6" style="clear: both; text-align: left; display: inline-block; float:none">
+  <h2 class="text-label" style="margin-bottom: 5%">Buy ticket</h2>
+
+  <%= render 'tickets/form', ticket: Ticket.new(:event_id => @event.id) %>
+</div>
+
+<div style="clear:both;">
+  <%= render 'tickets/showall', tickets: @event.tickets %>
+</div>
+<%= link_to 'Back', events_path %>

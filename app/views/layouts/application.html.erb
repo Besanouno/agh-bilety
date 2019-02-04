@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<<<<<<< HEAD
+    <title>HelloApp</title>
+=======
+    
+    <title>Tickets</title>
+>>>>>>> bilety
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<<<<<<< HEAD
+  <body>
+=======
+  <body style="background-color: #f2f2f2; text-align: center">
+
+  <p class="navbar-text pull-left" style="font-weight: bold">
+      <%= link_to 'Home', root_path, :class => 'navbar-link' %>
+    </p>
+
+    <p class="navbar-text pull-right">
+      <% if user_signed_in? %>Logged in as <strong><%= current_user.email %></strong>.
+        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, :class => 'navbar-link'%>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'%> |
+        <%= link_to "Sign in", new_user_session_path, :class => 'navbar-link'%>
+      <% end %>
+    </p>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+>>>>>>> bilety
+    <%= yield %>
+  </body>
+</html>
